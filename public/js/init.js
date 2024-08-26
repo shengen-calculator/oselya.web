@@ -22,12 +22,16 @@
 		// Remove "loading" class once the page has fully loaded.
 			window.onload = function() {
 				document.body.className = '';
-				const target = document.getElementById("header").getElementsByClassName("icon fa-envelope-o")[0];
-				target.addEventListener("click", (event) => {
+				const mailTarget = document.getElementById("header").getElementsByClassName("icon fa-envelope-o")[0];
+				mailTarget.addEventListener("click", (event) => {
 					const link = "mailto:support@oselya.life"
 						+ "?subject=" + encodeURIComponent("Support request")
-						+ "&body=" + encodeURIComponent("Вітаю,")
-					;
+						+ "&body=" + encodeURIComponent("Вітаю,");
+					window.location.href = link;
+				});
+				const viberTarget = document.getElementById("header").getElementsByClassName("icon fa-comments-o")[0];
+				viberTarget.addEventListener("click", (event) => {
+					const link = "viber://pa?chatURI=Oselya";
 					window.location.href = link;
 				});
 			}
