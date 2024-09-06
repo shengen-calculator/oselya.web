@@ -34,6 +34,11 @@
 					const link = "viber://pa?chatURI=Oselya";
 					window.location.href = link;
 				});
+				const telegramTarget = document.getElementById("header").getElementsByClassName("icon fa-mobile")[0];
+				telegramTarget.addEventListener("click", (event) => {
+					const link = "https://t.me/OselyaLifeBot";
+					window.location.href = link;
+				})
 			}
 
 		// Prevent scrolling on touch.
